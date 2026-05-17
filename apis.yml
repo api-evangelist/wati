@@ -48,11 +48,11 @@ common:
     url: https://docs.wati.io
   - type: Pricing
     url: https://www.wati.io/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://app.wati.io/register
   - type: Support
     url: https://support.wati.io
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/wati-io
 maintainers:
   - FN: Kin Lane
