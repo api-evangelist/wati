@@ -19,7 +19,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/wati/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
   - aid: wati:whatsapp-api
@@ -54,6 +54,9 @@ common:
     url: https://support.wati.io
   - type: GitHubOrganization
     url: https://github.com/wati-io
+  - name: MCP Server
+    url: https://github.com/wati-io/wati-mcp-server
+    type: MCPServer
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
