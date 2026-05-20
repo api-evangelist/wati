@@ -42,6 +42,8 @@ apis:
         url: https://docs.wati.io/reference/authentication
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/watiglobal
   - type: Website
     url: https://www.wati.io
   - type: Documentation
