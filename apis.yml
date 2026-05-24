@@ -59,6 +59,8 @@ common:
   - name: MCP Server
     url: https://github.com/wati-io/wati-mcp-server
     type: MCPServer
+  - type: LLMsTxt
+    url: https://docs.wati.io/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
