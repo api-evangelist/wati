@@ -1,0 +1,173 @@
+openapi: 3.1.0
+info:
+  title: WATI WhatsApp Business API
+  description: |
+    Tenant-scoped REST API for the WATI WhatsApp Business platform. Use this API
+    to send WhatsApp template and session messages, manage contacts, fetch
+    conversation history, and orchestrate operator assignments. Each WATI
+    workspace exposes its own base URL (for example,
+    `https://live-mt-server.wati.io/{tenantId}`) and authenticates calls with a
+    Bearer access token issued from the WATI dashboard.
+  version: "1.0.0"
+  contact:
+    name: WATI Support
+    url: https://support.wati.io
+  license:
+    name: Proprietary
+servers:
+  - url: https://live-mt-server.wati.io/{tenantId}/api/v1
+    description: WATI multi-tenant production server
+    variables:
+      tenantId:
+        default: "0"
+        description: WATI tenant / workspace identifier assigned to the account.
+security:
+  - bearerAuth: []
+tags:
+  - name: Contacts
+    description: Manage WhatsApp contacts in the WATI workspace.
+  - name: Messages
+    description: Retrieve and send WhatsApp messages.
+  - name: Templates
+    description: Send WhatsApp template messages.
+paths:
+  /getContacts:
+    get:
+      tags:
+        - Contacts
+      summary: List contacts
+      description: Retrieve a paginated list of contacts in the WATI workspace.
+      operationId: getContacts
+      parameters:
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+            format: int32
+            default: 10
+          description: Number of contacts to return per page.
+        - in: query
+          name: pageNumber
+          schema:
+            type: integer
+            format: int32
+            default: 1
+          description: 1-based page number to retrieve.
+      responses:
+        "200":
+          description: A paginated list of contacts.
+  /getMessages/{whatsappNumber}:
+    get:
+      tags:
+        - Messages
+      summary: Get messages by WhatsApp number
+      description: Retrieve message history for a given WhatsApp number, including country code (for example, `85264318721`).
+      operationId: getMessagesByNumber
+      parameters:
+        - in: path
+          name: whatsappNumber
+          required: true
+          schema:
+            type: string
+          description: WhatsApp number with country code, no leading `+`.
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+            format: int32
+          description: Number of messages per page.
+        - in: query
+          name: pageNumber
+          schema:
+            type: integer
+            format: int32
+          description: 1-based page number.
+      responses:
+        "200":
+          description: A paginated list of messages for the contact.
+  /sendTemplateMessage:
+    post:
+      tags:
+        - Templates
+        - Messages
+      summary: Send a WhatsApp template message
+      description: Send a pre-approved WhatsApp template message to a contact identified by phone number.
+      operationId: sendTemplateMessage
+      parameters:
+        - in: query
+          name: whatsappNumber
+          required: true
+          schema:
+            type: string
+          description: Destination WhatsApp number with country code.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - template_name
+                - broadcast_name
+              properties:
+                template_name:
+                  type: string
+                  description: Name of the WhatsApp template approved for the workspace.
+                broadcast_name:
+                  type: string
+                  description: Logical broadcast name used by WATI to group sends.
+                parameters:
+                  type: array
+                  description: Template parameter values keyed by template variable name.
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      value:
+                        type: string
+      responses:
+        "200":
+          description: Template message accepted for delivery.
+  /sendSessionMessage/{whatsappNumber}:
+    post:
+      tags:
+        - Messages
+      summary: Send a session message
+      description: Send a free-form WhatsApp session message inside the 24-hour customer service window.
+      operationId: sendSessionMessage
+      parameters:
+        - in: path
+          name: whatsappNumber
+          required: true
+          schema:
+            type: string
+          description: Destination WhatsApp number with country code.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - messageText
+              properties:
+                messageText:
+                  type: string
+                  description: Plain-text message body to send to the contact.
+      responses:
+        "200":
+          description: Session message accepted for delivery.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        WATI uses Bearer token authentication. Tokens are issued from the WATI
+        dashboard under API Docs and must be supplied as
+        `Authorization: Bearer <token>` on every request.
+externalDocs:
+  description: WATI API Reference
+  url: https://docs.wati.io/reference/introduction
