@@ -1,0 +1,142 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "WATI WhatsApp Business API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://live-mt-server.wati.io/{tenantId}/api/v1/getContacts",
+            "params": [
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query",
+                "description": "Number of contacts to return per page."
+              },
+              {
+                "name": "pageNumber",
+                "value": "",
+                "type": "query",
+                "description": "1-based page number to retrieve."
+              }
+            ]
+          },
+          "docs": "Retrieve a paginated list of contacts in the WATI workspace."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Messages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get messages by WhatsApp number",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://live-mt-server.wati.io/{tenantId}/api/v1/getMessages/:whatsappNumber",
+            "params": [
+              {
+                "name": "whatsappNumber",
+                "value": "",
+                "type": "path",
+                "description": "WhatsApp number with country code, no leading `+`."
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query",
+                "description": "Number of messages per page."
+              },
+              {
+                "name": "pageNumber",
+                "value": "",
+                "type": "query",
+                "description": "1-based page number."
+              }
+            ]
+          },
+          "docs": "Retrieve message history for a given WhatsApp number, including country code (for example, `85264318721`)."
+        },
+        {
+          "info": {
+            "name": "Send a session message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://live-mt-server.wati.io/{tenantId}/api/v1/sendSessionMessage/:whatsappNumber",
+            "params": [
+              {
+                "name": "whatsappNumber",
+                "value": "",
+                "type": "path",
+                "description": "Destination WhatsApp number with country code."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Send a free-form WhatsApp session message inside the 24-hour customer service window."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Send a WhatsApp template message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://live-mt-server.wati.io/{tenantId}/api/v1/sendTemplateMessage",
+            "params": [
+              {
+                "name": "whatsappNumber",
+                "value": "",
+                "type": "query",
+                "description": "Destination WhatsApp number with country code."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Send a pre-approved WhatsApp template message to a contact identified by phone number."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
