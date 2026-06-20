@@ -8,7 +8,7 @@ description: >-
   managing contacts, and integrating with external systems. WATI APIs use
   Bearer token authentication tied to each customer's WATI workspace.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - WhatsApp
   - Messaging
