@@ -50,7 +50,7 @@ common:
     url: https://docs.wati.io
   - type: Pricing
     url: https://www.wati.io/pricing
-  - type: SignUp
+  - type: Signup
     url: https://app.wati.io/register
   - type: Support
     url: https://support.wati.io
@@ -59,7 +59,7 @@ common:
   - name: MCP Server
     url: https://github.com/wati-io/wati-mcp-server
     type: MCPServer
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.wati.io/llms.txt
 maintainers:
   - FN: Kin Lane
