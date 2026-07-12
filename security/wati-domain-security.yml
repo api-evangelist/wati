@@ -1,0 +1,27 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.wati.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 26 03:08:59 2026 GMT
+  hsts: false
+- host: docs.wati.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 27 09:37:39 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: live-mt-server.wati.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 19 22:20:23 2026 GMT
+  hsts: false
+domains:
+- domain: wati.io
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

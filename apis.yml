@@ -42,6 +42,12 @@ apis:
         url: https://docs.wati.io/reference/authentication
 
 common:
+  - type: TrustCenter
+    url: security/wati-trust-center.yml
+  - type: DomainSecurity
+    url: security/wati-domain-security.yml
+  - type: Authentication
+    url: authentication/wati-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/watiglobal
   - type: Website
@@ -61,6 +67,8 @@ common:
     type: MCPServer
   - type: LlmsText
     url: https://docs.wati.io/llms.txt
+  - url: https://www.wati.io/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

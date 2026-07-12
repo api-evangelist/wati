@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://trust.wati.io/
+url: https://trust.wati.io/
+certifications:
+- SOC 2
+- ISO 27001
+- GDPR
+evidence:
+- source: https://trust.wati.io/
+  keywords:
+  - soc 2
+  - soc2
+  - iso 27001
+  - trust center
+  - gdpr
