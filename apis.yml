@@ -42,6 +42,8 @@ apis:
         url: https://docs.wati.io/reference/authentication
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/wati-agentic-access.yml
   - type: TrustCenter
     url: security/wati-trust-center.yml
   - type: DomainSecurity
