@@ -1,0 +1,76 @@
+openapi: 3.1.0
+info:
+  title: WATI WhatsApp Business Contacts API
+  description: 'Tenant-scoped REST API for the WATI WhatsApp Business platform. Use this API
+
+    to send WhatsApp template and session messages, manage contacts, fetch
+
+    conversation history, and orchestrate operator assignments. Each WATI
+
+    workspace exposes its own base URL (for example,
+
+    `https://live-mt-server.wati.io/{tenantId}`) and authenticates calls with a
+
+    Bearer access token issued from the WATI dashboard.
+
+    '
+  version: 1.0.0
+  contact:
+    name: WATI Support
+    url: https://support.wati.io
+  license:
+    name: Proprietary
+servers:
+- url: https://live-mt-server.wati.io/{tenantId}/api/v1
+  description: WATI multi-tenant production server
+  variables:
+    tenantId:
+      default: '0'
+      description: WATI tenant / workspace identifier assigned to the account.
+security:
+- bearerAuth: []
+tags:
+- name: Contacts
+  description: Manage WhatsApp contacts in the WATI workspace.
+paths:
+  /getContacts:
+    get:
+      tags:
+      - Contacts
+      summary: List contacts
+      description: Retrieve a paginated list of contacts in the WATI workspace.
+      operationId: getContacts
+      parameters:
+      - in: query
+        name: pageSize
+        schema:
+          type: integer
+          format: int32
+          default: 10
+        description: Number of contacts to return per page.
+      - in: query
+        name: pageNumber
+        schema:
+          type: integer
+          format: int32
+          default: 1
+        description: 1-based page number to retrieve.
+      responses:
+        '200':
+          description: A paginated list of contacts.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: 'WATI uses Bearer token authentication. Tokens are issued from the WATI
+
+        dashboard under API Docs and must be supplied as
+
+        `Authorization: Bearer <token>` on every request.
+
+        '
+externalDocs:
+  description: WATI API Reference
+  url: https://docs.wati.io/reference/introduction
