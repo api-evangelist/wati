@@ -8,7 +8,19 @@ description: >-
   managing contacts, and integrating with external systems. WATI APIs use
   Bearer token authentication tied to each customer's WATI workspace.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wati.png
 tags:
   - WhatsApp
   - Messaging
@@ -22,25 +34,53 @@ created: '2026-05-11'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: wati:whatsapp-api
-    name: WATI WhatsApp Business API
-    description: >-
-      Tenant-scoped REST API for sending WhatsApp template and session
-      messages, managing contacts, assigning operators, and orchestrating
-      chatbot flows. Uses Bearer token authentication with per-workspace
-      endpoint URLs (live-server-<id>.wati.io or live-mt-server.wati.io).
-    humanURL: https://docs.wati.io/reference/introduction
-    baseURL: https://live-mt-server.wati.io
-    tags:
-      - WhatsApp
-      - Messaging
-      - Chatbot
-    properties:
-      - type: Documentation
-        url: https://docs.wati.io/reference/introduction
-      - type: Authentication
-        url: https://docs.wati.io/reference/authentication
-
+- aid: wati:whatsapp-api
+  name: WATI WhatsApp Business API
+  description: >-
+    Tenant-scoped REST API for sending WhatsApp template and session messages, managing contacts, assigning
+    operators, and orchestrating chatbot flows. Uses Bearer token authentication with per-workspace endpoint
+    URLs (live-server-<id>.wati.io or live-mt-server.wati.io).
+  humanURL: https://docs.wati.io/reference/introduction
+  baseURL: https://live-mt-server.wati.io
+  tags:
+  - WhatsApp
+  - Messaging
+  - Chatbot
+  properties:
+  - type: Documentation
+    url: https://docs.wati.io/reference/introduction
+  - type: Authentication
+    url: https://docs.wati.io/reference/authentication
+- aid: wati:wati-contacts-api
+  name: WATI Contacts API
+  description: Manage WhatsApp contacts in the WATI workspace.
+  humanURL: https://docs.wati.io/reference/introduction
+  baseURL: https://live-mt-server.wati.io
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/wati-contacts-api-openapi.yml
+- aid: wati:wati-messages-api
+  name: WATI Messages API
+  description: Retrieve and send WhatsApp messages.
+  humanURL: https://docs.wati.io/reference/introduction
+  baseURL: https://live-mt-server.wati.io
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/wati-messages-api-openapi.yml
+- aid: wati:wati-templates-api
+  name: WATI Templates API
+  description: Send WhatsApp template messages.
+  humanURL: https://docs.wati.io/reference/introduction
+  baseURL: https://live-mt-server.wati.io
+  tags:
+  - Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/wati-templates-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/wati-agentic-access.yml
