@@ -1,0 +1,18 @@
+{
+  "provider": "wati",
+  "sources": [
+    "wati-contacts-api-openapi.yml",
+    "wati-messages-api-openapi.yml",
+    "wati-templates-api-openapi.yml"
+  ],
+  "outputs": [
+    "wati-contacts-api-openapi.yml",
+    "wati-messages-api-openapi.yml",
+    "wati-templates-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
