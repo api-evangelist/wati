@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "WATI WhatsApp Business Contacts Templates API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Send a WhatsApp template message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://live-mt-server.wati.io/{tenantId}/api/v1/sendTemplateMessage",
+            "params": [
+              {
+                "name": "whatsappNumber",
+                "value": "",
+                "type": "query",
+                "description": "Destination WhatsApp number with country code."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Send a pre-approved WhatsApp template message to a contact identified by phone number."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,408 @@
+{
+  "item": [
+    {
+      "id": "07f8fcc3-6c62-4958-889e-08477d2e2934",
+      "name": "Messages",
+      "description": {
+        "content": "Retrieve and send WhatsApp messages.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2c2a1798-0797-4fa1-84ab-102519b540f4",
+          "name": "Get messages by WhatsApp number",
+          "request": {
+            "name": "Get messages by WhatsApp number",
+            "description": {
+              "content": "Retrieve message history for a given WhatsApp number, including country code (for example, `85264318721`).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getMessages",
+                ":whatsappNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "<integer>",
+                  "description": "Number of messages per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "pageNumber",
+                  "value": "<integer>",
+                  "description": "1-based page number."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "whatsappNumber",
+                  "description": "(Required) WhatsApp number with country code, no leading `+`."
+                },
+                {
+                  "description": "WATI tenant / workspace identifier assigned to the account.",
+                  "type": "any",
+                  "value": "{{tenantId}}",
+                  "key": "tenantId"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e46b01e2-65f9-439f-aa4b-75038243e5a3",
+              "name": "A paginated list of messages for the contact.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getMessages",
+                    ":whatsappNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageNumber",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "whatsappNumber",
+                      "description": "(Required) WhatsApp number with country code, no leading `+`."
+                    },
+                    {
+                      "description": "WATI tenant / workspace identifier assigned to the account.",
+                      "type": "any",
+                      "value": "{{tenantId}}",
+                      "key": "tenantId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c3e7f073-1b2c-42dd-bf48-9204f9ded08c",
+          "name": "Send a WhatsApp template message",
+          "request": {
+            "name": "Send a WhatsApp template message",
+            "description": {
+              "content": "Send a pre-approved WhatsApp template message to a contact identified by phone number.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "sendTemplateMessage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "whatsappNumber",
+                  "value": "<string>",
+                  "description": "(Required) Destination WhatsApp number with country code."
+                }
+              ],
+              "variable": [
+                {
+                  "description": "WATI tenant / workspace identifier assigned to the account.",
+                  "type": "any",
+                  "value": "{{tenantId}}",
+                  "key": "tenantId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"template_name\": \"<string>\",\n  \"broadcast_name\": \"<string>\",\n  \"parameters\": [\n    {\n      \"name\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "56368a27-d0ab-483d-81a4-4d3ae7d0d568",
+              "name": "Template message accepted for delivery.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sendTemplateMessage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "whatsappNumber",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "WATI tenant / workspace identifier assigned to the account.",
+                      "type": "any",
+                      "value": "{{tenantId}}",
+                      "key": "tenantId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template_name\": \"<string>\",\n  \"broadcast_name\": \"<string>\",\n  \"parameters\": [\n    {\n      \"name\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "88c24f20-4a9a-4be0-a71d-789e2c815574",
+          "name": "Send a session message",
+          "request": {
+            "name": "Send a session message",
+            "description": {
+              "content": "Send a free-form WhatsApp session message inside the 24-hour customer service window.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "sendSessionMessage",
+                ":whatsappNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "whatsappNumber",
+                  "description": "(Required) Destination WhatsApp number with country code."
+                },
+                {
+                  "description": "WATI tenant / workspace identifier assigned to the account.",
+                  "type": "any",
+                  "value": "{{tenantId}}",
+                  "key": "tenantId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"messageText\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9505a9ab-f4fe-4f65-818a-ba7b0f034da0",
+              "name": "Session message accepted for delivery.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sendSessionMessage",
+                    ":whatsappNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "whatsappNumber",
+                      "description": "(Required) Destination WhatsApp number with country code."
+                    },
+                    {
+                      "description": "WATI tenant / workspace identifier assigned to the account.",
+                      "type": "any",
+                      "value": "{{tenantId}}",
+                      "key": "tenantId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"messageText\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "WATI tenant / workspace identifier assigned to the account.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "0",
+      "key": "tenantId"
+    },
+    {
+      "type": "string",
+      "value": "https://live-mt-server.wati.io/{{tenantId}}/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "64b9ffc8-76d0-43ee-b46b-0071683d4135",
+    "name": "WATI WhatsApp Business Contacts Messages API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Tenant-scoped REST API for the WATI WhatsApp Business platform. Use this API\nto send WhatsApp template and session messages, manage contacts, fetch\nconversation history, and orchestrate operator assignments. Each WATI\nworkspace exposes its own base URL (for example,\n`https://live-mt-server.wati.io/{tenantId}`) and authenticates calls with a\nBearer access token issued from the WATI dashboard.\n\n\nContact Support:\n Name: WATI Support",
+      "type": "text/plain"
+    }
+  }
+}

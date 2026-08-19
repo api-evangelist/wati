@@ -1,0 +1,154 @@
+{
+  "item": [
+    {
+      "id": "3eea2a88-36f2-449a-819b-c7160fdf3bec",
+      "name": "Contacts",
+      "description": {
+        "content": "Manage WhatsApp contacts in the WATI workspace.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "894d356d-b3eb-408d-a45c-5045e186303f",
+          "name": "List contacts",
+          "request": {
+            "name": "List contacts",
+            "description": {
+              "content": "Retrieve a paginated list of contacts in the WATI workspace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getContacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "10",
+                  "description": "Number of contacts to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "pageNumber",
+                  "value": "1",
+                  "description": "1-based page number to retrieve."
+                }
+              ],
+              "variable": [
+                {
+                  "description": "WATI tenant / workspace identifier assigned to the account.",
+                  "type": "any",
+                  "value": "{{tenantId}}",
+                  "key": "tenantId"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8d165e1-9df0-47e5-b752-5d8c843fc39e",
+              "name": "A paginated list of contacts.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getContacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "10"
+                    },
+                    {
+                      "key": "pageNumber",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "WATI tenant / workspace identifier assigned to the account.",
+                      "type": "any",
+                      "value": "{{tenantId}}",
+                      "key": "tenantId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "WATI tenant / workspace identifier assigned to the account.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "0",
+      "key": "tenantId"
+    },
+    {
+      "type": "string",
+      "value": "https://live-mt-server.wati.io/{{tenantId}}/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7d3f41a6-74c8-414f-85d7-d3d57b3649c1",
+    "name": "WATI WhatsApp Business Contacts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Tenant-scoped REST API for the WATI WhatsApp Business platform. Use this API\nto send WhatsApp template and session messages, manage contacts, fetch\nconversation history, and orchestrate operator assignments. Each WATI\nworkspace exposes its own base URL (for example,\n`https://live-mt-server.wati.io/{tenantId}`) and authenticates calls with a\nBearer access token issued from the WATI dashboard.\n\n\nContact Support:\n Name: WATI Support",
+      "type": "text/plain"
+    }
+  }
+}
