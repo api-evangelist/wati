@@ -25,6 +25,13 @@ tags:
   - WhatsApp
   - Messaging
   - Customer Engagement
+  - Chatbots
+  - Business Communication
+  - CRM
+tags_raw:
+  - WhatsApp
+  - Messaging
+  - Customer Engagement
   - Chatbot
   - Business Communication
   - CRM
@@ -43,6 +50,10 @@ apis:
   humanURL: https://docs.wati.io/reference/introduction
   baseURL: https://live-mt-server.wati.io
   tags:
+  - WhatsApp
+  - Messaging
+  - Chatbots
+  tags_raw:
   - WhatsApp
   - Messaging
   - Chatbot
@@ -67,6 +78,8 @@ apis:
   humanURL: https://docs.wati.io/reference/introduction
   baseURL: https://live-mt-server.wati.io
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
