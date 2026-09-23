@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: WATI WhatsApp Business Contacts API
   description: 'Tenant-scoped REST API for the WATI WhatsApp Business platform. Use this API
@@ -11,9 +11,7 @@ info:
 
     `https://live-mt-server.wati.io/{tenantId}`) and authenticates calls with a
 
-    Bearer access token issued from the WATI dashboard.
-
-    '
+    Bearer access token issued from the WATI dashboard.'
   version: 1.0.0
   contact:
     name: WATI Support

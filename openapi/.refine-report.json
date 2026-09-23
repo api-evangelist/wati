@@ -1,9 +1,7 @@
 {
   "provider": "wati",
   "sources": [
-    "wati-contacts-api-openapi.yml",
-    "wati-messages-api-openapi.yml",
-    "wati-templates-api-openapi.yml"
+    "_original/wati-openapi.yml"
   ],
   "outputs": [
     "wati-contacts-api-openapi.yml",
@@ -13,6 +11,14 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "wati-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "wati-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "wati-messages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "wati-templates-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

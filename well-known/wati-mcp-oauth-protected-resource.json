@@ -1,0 +1,1 @@
+{"authorization_servers":["https://mcp.wati.io"],"bearer_methods_supported":["header"],"logo_uri":"https://mcp.wati.io/logo.svg","resource":"https://mcp.wati.io","resource_name":"Wati MCP","scopes_supported":["all"]}
