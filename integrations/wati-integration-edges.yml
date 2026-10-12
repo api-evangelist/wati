@@ -1,0 +1,445 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/wati/integrations
+- https://n8n.io/integrations/wati/
+- https://composio.dev/toolkits/wati
+checked:
+- https://composio.dev/toolkits/wati
+- https://monid.ai/tools/wati
+- https://n8n.io/integrations/wati/
+- https://zapier.com/apps/wati/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: wati
+  url: https://zapier.com/apps/wati/integrations
+  external_url: https://wati.io/
+  partner_tier: BRONZE
+  triggers:
+  - key: new_contact_created
+    label: New Contact Created
+  - key: new_incoming_message
+    label: New Incoming Message
+  actions:
+  - key: add_contact
+    label: Add a Contact
+  - key: send_session_message
+    label: Send Session Message
+  - key: send_template_message
+    label: Send Template Message
+  - key: update_contact_attribute
+    label: Update Contact Attribute
+  searches: []
+- marketplace: n8n
+  channel: open-source-node
+  app: wati
+  url: https://n8n.io/integrations/wati/
+  identity: title
+  pair_pages: 0
+  pairs: []
+- marketplace: composio
+  channel: agent-gateway
+  app: wati
+  url: https://composio.dev/toolkits/wati
+  identity: action-prefix
+  actions:
+  - key: WATI_ADD_CONTACT
+  - key: WATI_GET_TEAMS
+  - key: WATI_SEND_SESSION_MESSAGE
+  - key: WATI_UPDATE_CHAT_STATUS
+  - key: WATI_UPDATE_CONTACT_ATTRIBUTES
+edges:
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: Pipedrive
+  partner: pipedrive
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/pipedrive
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pipedrive.com/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Wix
+  partner: wix
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/wix
+  direction: third-party
+  category: Website Builders
+  partner_url: https://www.wix.com/
+- partner_name: Shopify
+  partner: shopify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/shopify
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.shopify.com/
+- partner_name: Calendly
+  partner: calendly
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/calendly
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://calendly.com/?utm_medium=partner&utm_source=zapier&utm_campaign=main_partner_page&utm_content=main_inbound_link
+- partner_name: monday.com
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/monday
+  direction: third-party
+  category: Project Management
+  partner_url: https://monday.com/
+- partner_name: Razorpay
+  partner: razorpay
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/razorpay-1
+  direction: third-party
+  category: Payment Processing
+  partner_url: https://razorpay.com/
+- partner_name: Facebook Lead Ads (for Business admins)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/facebook-lead-ads-beta
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://facebook.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: LinkedIn Ads
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/linkedin-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.linkedin.com/
+- partner_name: WooCommerce
+  partner: woocommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/woocommerce
+  direction: third-party
+  category: eCommerce
+  partner_url: https://woocommerce.com/products/woocommerce-zapier/?utm_source=zapier&utm_medium=website&utm_campaign=integration
+- partner_name: Zapier Chatbots
+  partner: zapier
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/zapier-chatbots
+  direction: third-party
+  category: AI Chatbots
+  partner_url: https://zapier.com/blog/create-custom-ai-chatbots-with-interfaces/
+- partner_name: Zoom
+  partner: zoom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/zoom
+  direction: third-party
+  category: Video Conferencing
+  partner_url: https://www.zoom.us/
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+- partner_name: Zoho Forms
+  partner: zoho-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/zoho-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://go.zoho.com/LL2
+- partner_name: Google Drive
+  partner: google-drive
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/google-drive
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://www.google.com/drive/
+- partner_name: TikTok Lead Generation
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/tiktok-lead-generation
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://ads.tiktok.com/
+- partner_name: Google Contacts
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/google-contacts
+  direction: third-party
+  category: Contact Management
+  partner_url: https://www.google.com/contacts/
+- partner_name: systeme.io
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/systemeio
+  direction: third-party
+  category: Marketing
+  partner_url: https://systeme.io/
+- partner_name: Zid
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/zid
+  direction: third-party
+  category: eCommerce
+  partner_url: https://zid.sa/
+- partner_name: Microsoft Excel
+  partner: null
+  partner_match: null
+  partner_candidate: zapier
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/excel
+  direction: third-party
+  category: Microsoft
+  partner_url: https://zapier.com/office.com
+- partner_name: WhatsApp Notifications
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/whatsapp-notifications
+  direction: third-party
+  category: Communication
+  partner_url: null
+- partner_name: Odoo CRM
+  partner: odoo
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/odoo
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.odoo.com/
+- partner_name: ChatGPT (OpenAI)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/chatgpt
+  direction: third-party
+  category: AI Assistants
+  partner_url: https://chat.openai.com/chat
+- partner_name: Guesty
+  partner: guesty
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/guesty
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://www.guesty.com/
+- partner_name: Zoho CRM
+  partner: zoho-crm
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/wati/integrations/zoho-crm
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://go.zoho.com/wOk
+templates:
+- title: Trigger template messages in Wati with new rows in Google Sheets
+  url: https://zapier.com/apps/google-sheets/integrations/wati/556539/trigger-template-messages-in-wati-with-new-rows-in-google-sheets
+  apps:
+  - google-sheets
+  - wati
+- title: Create responses for new Wati messages using Zapier Chatbots
+  url: https://zapier.com/apps/wati/integrations/zapier-chatbots/255655023/create-responses-for-new-wati-messages-using-zapier-chatbots
+  apps:
+  - wati
+  - zapier-chatbots
+- title: Send outbound emails in Email by Zapier for new incoming messages in Wati
+  url: https://zapier.com/apps/email/integrations/wati/1672012/send-outbound-emails-in-email-by-zapier-for-new-incoming-messages-in-wati
+  apps:
+  - wati
+  - email
+- title: Send session messages in Wati when new orders are placed in Salla
+  url: https://zapier.com/apps/salla/integrations/wati/1315772/send-session-messages-in-wati-when-new-orders-are-placed-in-salla
+  apps:
+  - salla
+  - wati
+- title: Send WhatsApp messages via Wati for new Facebook Lead Ads leads
+  url: https://zapier.com/apps/facebook-lead-ads/integrations/wati/654800/send-whatsapp-messages-via-wati-for-new-facebook-lead-ads-leads
+  apps:
+  - facebook-lead-ads
+  - wati
+- title: Send template messages in Wati for new Jotform submissions
+  url: https://zapier.com/apps/jotform/integrations/wati/1317408/send-template-messages-in-wati-for-new-jotform-submissions
+  apps:
+  - jotform
+  - wati
+- title: Send WhatsApp template messages for new events in Google Calendar
+  url: https://zapier.com/apps/google-calendar/integrations/wati/544636/send-whatsapp-template-messages-for-new-events-in-google-calendar
+  apps:
+  - google-calendar
+  - wati
+- title: Send template messages in Wati for new form submissions in HubSpot
+  url: https://zapier.com/apps/hubspot/integrations/wati/1718705/send-template-messages-in-wati-for-new-form-submissions-in-hubspot
+  apps:
+  - hubspot
+  - wati
+- title: Create Zoho CRM entries for every new contact added in Wati
+  url: https://zapier.com/apps/wati/integrations/zoho-crm/255604899/create-zoho-crm-entries-for-every-new-contact-added-in-wati
+  apps:
+  - wati
+  - zoho-crm
+- title: Send template messages in Wati when new forms are submitted in Wix
+  url: https://zapier.com/apps/wati/integrations/wix/1651457/send-template-messages-in-wati-when-new-forms-are-submitted-in-wix
+  apps:
+  - wix
+  - wati
+- title: Send session messages in Wati for new Jotform submissions
+  url: https://zapier.com/apps/jotform/integrations/wati/1272410/send-session-messages-in-wati-for-new-jotform-submissions
+  apps:
+  - jotform
+  - wati
+- title: Handle new incoming messages in Wati by initiating custom requests in Webhooks by Zapier
+  url: https://zapier.com/apps/wati/integrations/webhook/1609734/handle-new-incoming-messages-in-wati-by-initiating-custom-requests-in-webhooks-by-zapier
+  apps:
+  - wati
+  - webhook
+template_total: 349
