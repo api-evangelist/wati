@@ -163,7 +163,6 @@
   arazzo: null
 - slug: wati-monday-com
   label: monday.com
-  partner: monday-com
   partner_name: monday.com
   category: Project Management
   type: marketplace
@@ -171,7 +170,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/wati/integrations/monday
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: wati-razorpay
   label: Razorpay
@@ -198,7 +197,6 @@
   arazzo: null
 - slug: wati-linkedin-ads
   label: LinkedIn Ads
-  partner: linkedin-ads
   partner_name: LinkedIn Ads
   category: Ads & Conversion
   type: marketplace
@@ -206,7 +204,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/wati/integrations/linkedin-ads
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: wati-woocommerce
   label: WooCommerce
@@ -314,7 +312,6 @@
   arazzo: null
 - slug: wati-microsoft-excel
   label: Microsoft Excel
-  partner: microsoft-excel
   partner_name: Microsoft Excel
   category: Microsoft
   type: marketplace
@@ -322,7 +319,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/wati/integrations/excel
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: wati-whatsapp-notifications
   label: WhatsApp Notifications
@@ -369,4 +366,23 @@
   evidence: https://zapier.com/apps/wati/integrations/guesty
   source: edge
   status: pending-generation
+  arazzo: null
+- slug: wati-mcp-registry
+  label: MCP Registry
+  partner: mcp
+  partner_name: MCP Registry
+  type: register
+  channel: standard-directory
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wati-io
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: io.github.wati-io/wati-mcp
+    register_id: io.github.wati-io/wati-mcp
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-14'
+  status: not-a-workflow
   arazzo: null

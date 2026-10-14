@@ -8,6 +8,7 @@ checked:
 - https://composio.dev/toolkits/wati
 - https://monid.ai/tools/wati
 - https://n8n.io/integrations/wati/
+- https://registry.modelcontextprotocol.io/v0/servers
 - https://zapier.com/apps/wati/integrations
 summary: null
 marketplace_apps:
@@ -381,6 +382,37 @@ edges:
   direction: third-party
   category: CRM (Customer Relationship Management)
   partner_url: https://go.zoho.com/wOk
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wati-io
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: io.github.wati-io/wati-mcp
+    register_id: io.github.wati-io/wati-mcp
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-14'
+  mcp_registry:
+    servers:
+    - io.github.wati-io/wati-mcp
+    hosted_remote: 1
+    local_package: 0
+    transports:
+      streamable-http: 2
+    auth_declared: 0
+    catalog_declared: true
+    namespace_domains:
+    - wati.io
+  matched_by:
+  - remote-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
 templates:
 - title: Trigger template messages in Wati with new rows in Google Sheets
   url: https://zapier.com/apps/google-sheets/integrations/wati/556539/trigger-template-messages-in-wati-with-new-rows-in-google-sheets
