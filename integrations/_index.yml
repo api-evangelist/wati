@@ -409,7 +409,7 @@
     app_slug: wati
     beta: false
     builder: unknown (not in the directory record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: wati-n8n
   label: n8n
@@ -436,7 +436,7 @@
     published: '2026-05-28T03:02:18.981Z'
     matched_on: publisher-email
     builder: provider (package published from the provider's own domain)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: wati-pipedream
   label: Pipedream
@@ -462,5 +462,5 @@
     actions: true
     sources: true
     builder: Pipedream repo (component)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
