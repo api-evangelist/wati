@@ -5,6 +5,7 @@ source:
 - https://n8n.io/integrations/wati/
 - https://composio.dev/toolkits/wati
 checked:
+- google-workspace/integrations/google-workspace-integration-edges.yml
 - https://composio.dev/toolkits/wati
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
 - https://monid.ai/tools/wati
@@ -494,6 +495,23 @@ edges:
     builder: Pipedream repo (component)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: Google Workspace (own)
+  partner: google-workspace
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://workspace.google.com/marketplace/app/whatsapp_message_sender_and_automation/212905810455
+  mirror_of: google-workspace/integrations/google-workspace-integration-edges.yml
+  apps:
+  - WhatsApp Message Sender and Automation
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Google Workspace app
 templates:
 - title: Trigger template messages in Wati with new rows in Google Sheets
   url: https://zapier.com/apps/google-sheets/integrations/wati/556539/trigger-template-messages-in-wati-with-new-rows-in-google-sheets

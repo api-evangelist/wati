@@ -464,3 +464,16 @@
     builder: Pipedream repo (component)
   status: not-a-workflow
   arazzo: null
+- slug: wati-google-workspace-own
+  label: Google Workspace (own)
+  partner: google-workspace
+  partner_name: Google Workspace (own)
+  category: Google Workspace app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://workspace.google.com/marketplace/app/whatsapp_message_sender_and_automation/212905810455
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
