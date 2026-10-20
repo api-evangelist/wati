@@ -383,7 +383,32 @@
     registered_name: io.github.wati-io/wati-mcp
     register_id: io.github.wati-io/wati-mcp
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: wati-google-workspace-own
+  label: Google Workspace (own)
+  partner: google-workspace
+  partner_name: Google Workspace (own)
+  category: Google Workspace app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://workspace.google.com/marketplace/app/whatsapp_message_sender_and_automation/212905810455
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: wati-n8n-n8n-community
+  label: n8n (n8n-community)
+  partner: n8n
+  partner_name: n8n (n8n-community)
+  type: marketplace
+  marketplace: n8n-community
+  channel: partner-built
+  evidence: https://www.npmjs.com/package/n8n-nodes-wati
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
 - slug: wati-zapier
@@ -445,7 +470,7 @@
   type: marketplace
   marketplace: pipedream-components
   channel: open-source-node
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/wati
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/wati
   source: edge
   relationship: ipaas-bridge
   contract_reference:
@@ -462,18 +487,5 @@
     actions: true
     sources: true
     builder: Pipedream repo (component)
-  status: not-a-workflow
-  arazzo: null
-- slug: wati-google-workspace-own
-  label: Google Workspace (own)
-  partner: google-workspace
-  partner_name: Google Workspace (own)
-  category: Google Workspace app
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://workspace.google.com/marketplace/app/whatsapp_message_sender_and_automation/212905810455
-  source: edge
-  relationship: platform-app
   status: not-a-workflow
   arazzo: null
